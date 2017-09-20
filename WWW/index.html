@@ -1,0 +1,383 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<base href="_w_485a7e70/" />
+    <script type="text/javascript">
+(function() {
+  // http://stackoverflow.com/questions/10964966/detect-ie-version-in-javascript
+  function isIE () {
+    var myNav = navigator.userAgent.toLowerCase();
+    return (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1]) : false;
+  }
+
+  if (isIE() === 8 || isIE() === 9){
+    // Set an absolute base href.
+    baseURL = document.URL;
+    baseURL = baseURL.substring(0, baseURL.lastIndexOf('/'));
+    document.getElementsByTagName('base')[0].setAttribute('href', baseURL + '/_w_485a7e70/');
+  }
+})();
+</script>
+
+      <script type="text/javascript">
+      var __connect = {
+        shiny: '1.0.5'
+      }
+      </script>
+      
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>  <script type="application/shiny-singletons"></script>  <script type="application/html-dependencies">json2[2014.02.04];jquery[1.12.4];shiny[1.0.5];selectize[0.11.2];bootstrap[3.3.7]</script><script src="shared/json2-min.js"></script>
+<script src="shared/jquery.min.js"></script>
+<link href="shared/shiny.css" rel="stylesheet" />
+<script src="shared/shiny.min.js"></script>
+<link href="shared/selectize/css/selectize.bootstrap3.css" rel="stylesheet" />
+<!--[if lt IE 9]>
+<script src="shared/selectize/js/es5-shim.min.js"></script>
+<![endif]-->
+<script src="shared/selectize/js/selectize.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="shared/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+<script src="shared/bootstrap/js/bootstrap.min.js"></script>
+<script src="shared/bootstrap/shim/html5shiv.min.js"></script>
+<script src="shared/bootstrap/shim/respond.min.js"></script>  <title>REGION-WISE DISTRIBUTION OF OIL RIGS IN THE WORLD</title>
+
+<script src="__assets__/sockjs-0.3.min.js"></script>
+<script src="__assets__/shiny-server-client.js"></script>
+<script>preShinyInit({reconnect:false,reconnectTimeout:0,disableProtocols:["xdr-streaming","xdr-polling","websocket"],transportDebugging:false,token:true,workerId:true,subappTag:true,extendSession:true,fixupInternalLinks:true});</script>
+<link rel="stylesheet" type="text/css" href="__assets__/rstudio-connect.css"/>
+</head>
+
+<body>
+<script type="text/javascript" src="/__static__/components/iframe-resizer/js/iframeResizer.contentWindow.min.js"></script>
+<script type="text/javascript" src="/__static__/frontend/scripts/shinyapps.frame.content.js"></script>
+<script type="text/javascript" src="/__static__/frontend/scripts/shinyapps.js"></script>
+
+  <div class="container-fluid">
+    <h2>REGION-WISE DISTRIBUTION OF OIL RIGS IN THE WORLD</h2>
+    <div class="row">
+      <div class="col-sm-8">
+        <div class="tabbable">
+          <ul class="nav nav-tabs" data-tabsetid="5893">
+            <li class="active">
+              <a href="#tab-5893-1" data-toggle="tab" data-value="WELCOME">WELCOME</a>
+            </li>
+            <li>
+              <a href="#tab-5893-2" data-toggle="tab" data-value="MIDDLE-EAST COUNTRIES - PLOT 1&amp;2">MIDDLE-EAST COUNTRIES - PLOT 1&amp;2</a>
+            </li>
+            <li>
+              <a href="#tab-5893-3" data-toggle="tab" data-value="AFRICAN COUNTRIES - PLOT 3&amp;4">AFRICAN COUNTRIES - PLOT 3&amp;4</a>
+            </li>
+            <li>
+              <a href="#tab-5893-4" data-toggle="tab" data-value="LATIN AMERICAN COUNTRIES - PLOT 5&amp;6">LATIN AMERICAN COUNTRIES - PLOT 5&amp;6</a>
+            </li>
+            <li>
+              <a href="#tab-5893-5" data-toggle="tab" data-value="EUROPEAN COUNTRIES - PLOT 7&amp;8">EUROPEAN COUNTRIES - PLOT 7&amp;8</a>
+            </li>
+            <li>
+              <a href="#tab-5893-6" data-toggle="tab" data-value="ASIA PACIFIC COUNTRIES - PLOT 9&amp;10">ASIA PACIFIC COUNTRIES - PLOT 9&amp;10</a>
+            </li>
+          </ul>
+          <div class="tab-content" data-tabsetid="5893">
+            <div class="tab-pane active" data-value="WELCOME" id="tab-5893-1">
+              <br/>
+              <h4>
+                Hello user.
+                <br/>
+                
+                This application helps you to analyse the rig counts around the World.I have divided the 10 plots into Region-wise segments. Choose your respective region of interest and input the year to see the changes in Oil Rig-Count between different countries in that respective region. You can also analyse each individual countries changes of the number of Oil Rigs with the help of the lower plot in each tab.
+              </h4>
+              <h4>
+                <br/>
+                
+                <br/>
+                Below are the changes of average Brent Oil Price between 2012 to 2017, and is said to be one of the major cause of fluctuation in rig counts. We can use this as a reference when going through the different plots
+              </h4>
+              <div id="plot" class="shiny-plot-output" style="width: 100% ; height: 400px"></div>
+              <h4>HAVE A GREAT DAY</h4>
+            </div>
+            <div class="tab-pane" data-value="MIDDLE-EAST COUNTRIES - PLOT 1&amp;2" id="tab-5893-2">
+              <br/>
+              <h3>PLOT 1 - Compare Rig Count in Middle-East 2012/2017</h3>
+              <h5>By choosing the required year from the respective tab, we can analyse the changes below.</h5>
+              <div id="plot1" class="shiny-plot-output" style="width: 100% ; height: 400px"></div>
+              <h3>PLOT 2 - Compare Rig Count of each Middle-East Countries 2012/2017</h3>
+              <h5>By choosing the required country from the respective tab, we can analyse the changes below.</h5>
+              <h5>
+                AVERAGE OIL PRICES
+                <br/>
+                2012 - 109.45$/bbl
+                <br/>
+                2013 - 105.87$/bbl
+                <br/>
+                2014 - 96.29$/bbl
+                <br/>
+                2015 - 49.49$/bbl
+                <br/>
+                2016 - 40.68$/bbl
+                <br/>
+                2017 - 49.83$/bbl
+              </h5>
+              <div id="plot2" class="shiny-plot-output" style="width: 100% ; height: 400px"></div>
+            </div>
+            <div class="tab-pane" data-value="AFRICAN COUNTRIES - PLOT 3&amp;4" id="tab-5893-3">
+              <br/>
+              <h3>PLOT 3 - Compare Rig Count in Africa 2012/2017</h3>
+              <h5>By choosing the required year from the respective tab, we can analyse the changes below.</h5>
+              <div id="plot3" class="shiny-plot-output" style="width: 100% ; height: 400px"></div>
+              <h3>PLOT 4 - Compare Rig Count of each African Countries 2012/2017</h3>
+              <h5>By choosing the required country from the respective tab, we can analyse the changes below.</h5>
+              <h5>
+                AVERAGE OIL PRICES
+                <br/>
+                2012 - 109.45$/bbl
+                <br/>
+                2013 - 105.87$/bbl
+                <br/>
+                2014 - 96.29$/bbl
+                <br/>
+                2015 - 49.49$/bbl
+                <br/>
+                2016 - 40.68$/bbl
+                <br/>
+                2017 - 49.83$/bbl
+              </h5>
+              <div id="plot4" class="shiny-plot-output" style="width: 100% ; height: 400px"></div>
+            </div>
+            <div class="tab-pane" data-value="LATIN AMERICAN COUNTRIES - PLOT 5&amp;6" id="tab-5893-4">
+              <br/>
+              <h3>PLOT 5 - Compare Rig Count in Latin America 2012/2017</h3>
+              <h5>By choosing the required year from the respective tab, we can analyse the changes below.</h5>
+              <div id="plot5" class="shiny-plot-output" style="width: 100% ; height: 400px"></div>
+              <h3>PLOT 6 - Compare Rig Count of each Latin American Countries 2012/2017</h3>
+              <h5>By choosing the required country from the respective tab, we can analyse the changes below.</h5>
+              <h5>
+                AVERAGE OIL PRICES
+                <br/>
+                2012 - 109.45$/bbl
+                <br/>
+                2013 - 105.87$/bbl
+                <br/>
+                2014 - 96.29$/bbl
+                <br/>
+                2015 - 49.49$/bbl
+                <br/>
+                2016 - 40.68$/bbl
+                <br/>
+                2017 - 49.83$/bbl
+              </h5>
+              <div id="plot6" class="shiny-plot-output" style="width: 100% ; height: 400px"></div>
+            </div>
+            <div class="tab-pane" data-value="EUROPEAN COUNTRIES - PLOT 7&amp;8" id="tab-5893-5">
+              <br/>
+              <h3>PLOT 7 - Compare Rig Count in Europe 2012/2017</h3>
+              <h5>By choosing the required year from the respective tab, we can analyse the changes below.</h5>
+              <div id="plot7" class="shiny-plot-output" style="width: 100% ; height: 400px"></div>
+              <h3>PLOT 8 - Compare Rig Count of each European Countries 2012/2017</h3>
+              <h5>By choosing the required country from the respective tab, we can analyse the changes below.</h5>
+              <h5>
+                AVERAGE OIL PRICES
+                <br/>
+                2012 - 109.45$/bbl
+                <br/>
+                2013 - 105.87$/bbl
+                <br/>
+                2014 - 96.29$/bbl
+                <br/>
+                2015 - 49.49$/bbl
+                <br/>
+                2016 - 40.68$/bbl
+                <br/>
+                2017 - 49.83$/bbl
+              </h5>
+              <div id="plot8" class="shiny-plot-output" style="width: 100% ; height: 400px"></div>
+            </div>
+            <div class="tab-pane" data-value="ASIA PACIFIC COUNTRIES - PLOT 9&amp;10" id="tab-5893-6">
+              <br/>
+              <h3>PLOT 9 - Compare Rig Count in Asia Pacific 2012/2017</h3>
+              <h5>By choosing the required year from the respective tab, we can analyse the changes below.</h5>
+              <div id="plot9" class="shiny-plot-output" style="width: 100% ; height: 400px"></div>
+              <h3>PLOT 10 - Compare Rig Count of each Asia Pacific Countries 2012/2017</h3>
+              <h5>By choosing the required country from the respective tab, we can analyse the changes below.</h5>
+              <h5>
+                AVERAGE OIL PRICES
+                <br/>
+                2012 - 109.45$/bbl
+                <br/>
+                2013 - 105.87$/bbl
+                <br/>
+                2014 - 96.29$/bbl
+                <br/>
+                2015 - 49.49$/bbl
+                <br/>
+                2016 - 40.68$/bbl
+                <br/>
+                2017 - 49.83$/bbl
+              </h5>
+              <div id="plot10" class="shiny-plot-output" style="width: 100% ; height: 400px"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <form class="well">
+          <h2>Select from the below tabs to see the changes in the respective plots</h2>
+          <div class="form-group shiny-input-container">
+            <label class="control-label" for="YEARME">PLOT 1 - CHOOSE YEAR</label>
+            <div>
+              <select id="YEARME"><option value="2012" selected>2012</option>
+<option value="2013">2013</option>
+<option value="2014">2014</option>
+<option value="2015">2015</option>
+<option value="2016">2016</option>
+<option value="2017">2017</option></select>
+              <script type="application/json" data-for="YEARME" data-nonempty="">{}</script>
+            </div>
+          </div>
+          <div class="form-group shiny-input-container">
+            <label class="control-label" for="ME">PLOT 2 - CHOOSE MIDDLE-EAST COUNTRY</label>
+            <div>
+              <select id="ME"><option value="BAHRAIN" selected>BAHRAIN</option>
+<option value="EGYPT">EGYPT</option>
+<option value="IRAQ">IRAQ</option>
+<option value="KUWAIT">KUWAIT</option>
+<option value="OMAN">OMAN</option>
+<option value="PAKISTAN">PAKISTAN</option>
+<option value="QATAR">QATAR</option>
+<option value="SAUDI">SAUDI</option>
+<option value="UAE">UAE</option>
+<option value="OTHERS">OTHERS</option></select>
+              <script type="application/json" data-for="ME" data-nonempty="">{}</script>
+            </div>
+          </div>
+          <div class="form-group shiny-input-container">
+            <label class="control-label" for="YEARAF">PLOT 3 - CHOOSE YEAR</label>
+            <div>
+              <select id="YEARAF"><option value="2012" selected>2012</option>
+<option value="2013">2013</option>
+<option value="2014">2014</option>
+<option value="2015">2015</option>
+<option value="2016">2016</option>
+<option value="2017">2017</option></select>
+              <script type="application/json" data-for="YEARAF" data-nonempty="">{}</script>
+            </div>
+          </div>
+          <div class="form-group shiny-input-container">
+            <label class="control-label" for="AFR">PLOT 4 - CHOOSE AFRICAN COUNTRY</label>
+            <div>
+              <select id="AFR"><option value="ALGERIA" selected>ALGERIA</option>
+<option value="ANGOLA">ANGOLA</option>
+<option value="CAMEROON">CAMEROON</option>
+<option value="CHAD">CHAD</option>
+<option value="CONGO">CONGO</option>
+<option value="GABON">GABON</option>
+<option value="KENYA">KENYA</option>
+<option value="LIBYA">LIBYA</option>
+<option value="NIGERIA">NIGERIA</option>
+<option value="OTHERS_1">OTHERS_1</option></select>
+              <script type="application/json" data-for="AFR" data-nonempty="">{}</script>
+            </div>
+          </div>
+          <div class="form-group shiny-input-container">
+            <label class="control-label" for="YEARLT">PLOT 5 - CHOOSE YEAR</label>
+            <div>
+              <select id="YEARLT"><option value="2012" selected>2012</option>
+<option value="2013">2013</option>
+<option value="2014">2014</option>
+<option value="2015">2015</option>
+<option value="2016">2016</option>
+<option value="2017">2017</option></select>
+              <script type="application/json" data-for="YEARLT" data-nonempty="">{}</script>
+            </div>
+          </div>
+          <div class="form-group shiny-input-container">
+            <label class="control-label" for="LTN">PLOT 6 - CHOOSE LATIN AMERICAN COUNTRY</label>
+            <div>
+              <select id="LTN"><option value="ARGENTINA" selected>ARGENTINA</option>
+<option value="BOLIVIA">BOLIVIA</option>
+<option value="BRAZIL">BRAZIL</option>
+<option value="CHILE">CHILE</option>
+<option value="COLOMBIA">COLOMBIA</option>
+<option value="ECUADOR">ECUADOR</option>
+<option value="MEXICO">MEXICO</option>
+<option value="PERU">PERU</option>
+<option value="TRINIDAD.AND.TOBAGO">TRINIDAD.AND.TOBAGO</option>
+<option value="VENEZUELA">VENEZUELA</option>
+<option value="Others">Others</option></select>
+              <script type="application/json" data-for="LTN" data-nonempty="">{}</script>
+            </div>
+          </div>
+          <div class="form-group shiny-input-container">
+            <label class="control-label" for="YEAREU">PLOT 7 - CHOOSE YEAR</label>
+            <div>
+              <select id="YEAREU"><option value="2012" selected>2012</option>
+<option value="2013">2013</option>
+<option value="2014">2014</option>
+<option value="2015">2015</option>
+<option value="2016">2016</option>
+<option value="2017">2017</option></select>
+              <script type="application/json" data-for="YEAREU" data-nonempty="">{}</script>
+            </div>
+          </div>
+          <div class="form-group shiny-input-container">
+            <label class="control-label" for="EUR">PLOT 8 - CHOOSE EUROPEAN COUNTRY</label>
+            <div>
+              <select id="EUR"><option value="ALBANIA" selected>ALBANIA</option>
+<option value="AUSTRIA">AUSTRIA</option>
+<option value="CZECH">CZECH</option>
+<option value="DENMARK">DENMARK</option>
+<option value="FRANCE">FRANCE</option>
+<option value="GERMANY">GERMANY</option>
+<option value="HUNGARY">HUNGARY</option>
+<option value="ITALY">ITALY</option>
+<option value="LITHUANIA">LITHUANIA</option>
+<option value="NETHERLANDS">NETHERLANDS</option>
+<option value="NORWAY">NORWAY</option>
+<option value="POLAND">POLAND</option>
+<option value="ROMANIA">ROMANIA</option>
+<option value="SERBIA">SERBIA</option>
+<option value="TURKEY">TURKEY</option>
+<option value="UK">UK</option>
+<option value="SAKHALIN">SAKHALIN</option>
+<option value="OTHERS_2">OTHERS_2</option></select>
+              <script type="application/json" data-for="EUR" data-nonempty="">{}</script>
+            </div>
+          </div>
+          <div class="form-group shiny-input-container">
+            <label class="control-label" for="YEARAP">PLOT 9 - CHOOSE YEAR</label>
+            <div>
+              <select id="YEARAP"><option value="2012" selected>2012</option>
+<option value="2013">2013</option>
+<option value="2014">2014</option>
+<option value="2015">2015</option>
+<option value="2016">2016</option>
+<option value="2017">2017</option></select>
+              <script type="application/json" data-for="YEARAP" data-nonempty="">{}</script>
+            </div>
+          </div>
+          <div class="form-group shiny-input-container">
+            <label class="control-label" for="ASP">PLOT 10 - CHOOSE ASIA-PACIFIC COUNTRY</label>
+            <div>
+              <select id="ASP"><option value="AUSTRALIA" selected>AUSTRALIA</option>
+<option value="CHINA.OFFSHORE">CHINA.OFFSHORE</option>
+<option value="INDIA">INDIA</option>
+<option value="INDONESIA">INDONESIA</option>
+<option value="JAPAN">JAPAN</option>
+<option value="MALAYSIA">MALAYSIA</option>
+<option value="NEW.ZEALAND">NEW.ZEALAND</option>
+<option value="PAPUA.NEW.GUINEA">PAPUA.NEW.GUINEA</option>
+<option value="PHILIPPINES">PHILIPPINES</option>
+<option value="THAILAND">THAILAND</option>
+<option value="VIETNAM">VIETNAM</option>
+<option value="OTHERS_3">OTHERS_3</option></select>
+              <script type="application/json" data-for="ASP" data-nonempty="">{}</script>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+

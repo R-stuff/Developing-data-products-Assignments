@@ -1,0 +1,60 @@
+---
+title: "Developing Data Products - Week 4 Assignment"
+author: "NITHIN V"
+date: "9/20/2017"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(readr)
+Middle <- read_csv("MiddleEast-RigCount.csv")
+Middle <- data.frame(Middle)
+names(Middle) <- gsub("X","", names(Middle))
+Middleast <- Middle[1:10,1:7]
+Africa <-Middle[1:10, 8:14]
+names(Africa) <-gsub("_1","", names(Africa))
+Latinamerica<- Middle[1:11,15:21]
+names(Latinamerica) <-gsub("_2","", names(Latinamerica))
+Europe <- Middle[1:18,22:28]
+names(Europe) <-gsub("_3","", names(Europe))
+Asiapacific <- Middle[1:12,29:35]
+names(Asiapacific) <-gsub("_4","", names(Asiapacific))
+Price <- Middle[1:6, 36:37]
+
+Midd <- read_csv("Midd.csv", col_types = cols(Date = col_character()))
+Midd <- data.frame(Midd)
+```
+
+## Region-Wise Distribution Of Oil Rigs In The World
+
+- In this project, I have made a detailed analysis of the distribution of oil rigs around the world. The data is split into regionwise segments which helps us to analyse the information much easier. 
+- There are a total of 10 plots in 5 different tabs, each split into Middle-eastern, African, Latin-American, European and Asia Pacific countries where we can make a comparison between each of the countries and also an analysis within each country through the years from 2012 to 2017.
+- I have also included information about the oil prices from 2012 to 2017. 
+
+
+## Oil Prices
+Shown below are the fluctuations in Average Brent Oil Prices, which can be take be taken as the primary reason for the changes in Oil Rig-Count.
+
+```{r cars, echo = FALSE, eval= TRUE}
+    plot(Price$Year, Price$Price....bbl., type = "b", col = "red", xlab = "Year", ylab = "Price in $/bbl", main = "Average Brent Oil Prices")
+
+```
+
+
+## Region-wise Segments
+- Middle-East: Bahrain, Egypt, Iraq, Kuwait, Oman, Pakistan, Qatar, Saudi, Uae, Others.
+- Africa: Algeria, Angola, Cameroon, Chad, Congo, Gabon, Kenya, Libya, Nigeria, Others.
+- Latin America: Argentina, Bolivia, Brazil, Chile, Colombia, Ecuador, Mexico, Peru, Trinidad And Tobago, Venezuela, Others.
+- Europe: Albania, Austria, Czech Republic, Denmark, France, Germany, Hungary, Italy, Lithuania, Netherlands, Norway, Poland, Romania, Serbia, Turkey, Uk, Sakhalin, Others.
+- Asia Pacific: Australia, China Offshore, India, Indonesia, Japan, Malaysia, New Zealand, Papua New Guinea, Philippines, Thailand, Vietnam, Others.
+
+
+## Final conclusion
+- Since the fluctuations in the oil prices have been extreme, many countries have reduced their rig count through the years. By slowly reducing the oil output, the countries aim to reduce the oil supply and thereby increasing the prices of oil.
+- There is an upward trend in the average brent oil prices this year and hence we can expect more rigs to deploy if the trend continues.
+
+- References: http://phx.corporate-ir.net/phoenix.zhtml?c=79687&p=irol-rigcountsintl
+
+
+
